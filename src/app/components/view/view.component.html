@@ -1,0 +1,60 @@
+<h4 class="header-container">Car Dealership</h4>
+<div class="example-container">
+
+    <button mat-raised-button (click)="openDialog()">Apply filters</button>
+</div>
+
+<table mat-table [dataSource]="cars" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="make">
+        <th mat-header-cell *matHeaderCellDef> Make </th>
+        <td mat-cell *matCellDef="let element"> {{element.make}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="year">
+        <th mat-header-cell *matHeaderCellDef> Year </th>
+        <td mat-cell *matCellDef="let element"> {{element.year}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="color">
+        <th mat-header-cell *matHeaderCellDef> Color </th>
+        <td mat-cell *matCellDef="let element"> {{element.color}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="hasSunroof">
+        <th mat-header-cell *matHeaderCellDef> HasSunroof </th>
+        <td mat-cell *matCellDef="let element"> {{element.hasSunroof}} </td>
+    </ng-container>
+    <ng-container matColumnDef="isFourWheelDrive">
+        <th mat-header-cell *matHeaderCellDef> IsFourWheelDrive </th>
+        <td mat-cell *matCellDef="let element"> {{element.isFourWheelDrive}} </td>
+    </ng-container>
+    <ng-container matColumnDef="hasLowMiles">
+        <th mat-header-cell *matHeaderCellDef> HasLowMiles </th>
+        <td mat-cell *matCellDef="let element"> {{element.hasLowMiles}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="hasPowerWindows">
+        <th mat-header-cell *matHeaderCellDef> HasPowerWindows </th>
+        <td mat-cell *matCellDef="let element"> {{element.hasPowerWindows}} </td>
+    </ng-container>
+    <ng-container matColumnDef="hasNavigation">
+        <th mat-header-cell *matHeaderCellDef> HasNavigation </th>
+        <td mat-cell *matCellDef="let element"> {{element.hasNavigation}} </td>
+    </ng-container>
+    <ng-container matColumnDef="hasHeatedSeats">
+        <th mat-header-cell *matHeaderCellDef> HasHeatedSeats </th>
+        <td mat-cell *matCellDef="let element"> {{element.hasHeatedSeats}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

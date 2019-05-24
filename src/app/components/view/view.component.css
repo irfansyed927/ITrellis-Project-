@@ -1,0 +1,22 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    margin:50px;
+    width: 10%;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    margin:50px;
+    width: 30%;
+  }
+  
+  .example-container > * {
+    width: 80%;
+  }
+
+  table {
+    width: 80%;
+    margin :50px;
+  }

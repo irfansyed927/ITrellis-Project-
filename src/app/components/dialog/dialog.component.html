@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>Car Options:</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-select placeholder="Select color" [(value)]="car.color">
+            <mat-option value="Red">Red</mat-option>
+            <mat-option value="White">White</mat-option>
+            <mat-option value="Gray">Gray</mat-option>
+            <mat-option value="Silver">Silver</mat-option>
+            <mat-option value="Black">Black</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br/>
+    <label id="example-radio-group-label">Sun proof</label>
+    <mat-radio-group aria-label="Select an option" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="car.hasSunroof">
+        <mat-radio-button value="true">True</mat-radio-button>
+        <mat-radio-button value="false">False</mat-radio-button>
+    </mat-radio-group>
+    <br/>
+    <label id="example-radio-group-label">4 wheel drive</label>
+    <mat-radio-group aria-label="Select an option" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="car.isFourWheelDrive">
+        <mat-radio-button value="true">True</mat-radio-button>
+        <mat-radio-button value="false">False</mat-radio-button>
+    </mat-radio-group>
+    <br/>
+    <label id="example-radio-group-label">Low miles</label>
+    <mat-radio-group aria-label="Select an option" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="car.hasLowMiles">
+        <mat-radio-button value="true">True</mat-radio-button>
+        <mat-radio-button value="false">False</mat-radio-button>
+    </mat-radio-group>
+    <br/>
+    <label id="example-radio-group-label">Power windows</label>
+    <mat-radio-group aria-label="Select an option" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="car.hasPowerWindows">
+        <mat-radio-button value="true">True</mat-radio-button>
+        <mat-radio-button value="false">False</mat-radio-button>
+    </mat-radio-group>
+    <br/>
+    <label id="example-radio-group-label">Navigation</label>
+    <mat-radio-group aria-label="Select an option" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="car.hasNavigation">
+        <mat-radio-button value="true">True</mat-radio-button>
+        <mat-radio-button value="false">False</mat-radio-button>
+    </mat-radio-group>
+    <br/>
+    <label id="example-radio-group-label">Heated seats</label>
+    <mat-radio-group aria-label="Select an option" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="car.hasHeatedSeats">
+        <mat-radio-button value="true">True</mat-radio-button>
+        <mat-radio-button value="false">False</mat-radio-button>
+    </mat-radio-group>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">reset</button>
+    <button mat-button [mat-dialog-close]="car" cdkFocusInitial>filter</button>
+</div>
